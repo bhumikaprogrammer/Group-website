@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negative Impact of Technology in the Watch Industry</title>
+    <link rel="stylesheet" href="blog.css">
+    <style>
+       body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center content vertically */
+            height: 100vh; 
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 1vh 2vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .container {
+            display: flex;
+            max-width: 140vh;
+            margin: 4vh auto;
+            background: white;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+            border-radius: 0.8vh;
+        }
+
+        .content {
+            flex: 3;
+            padding: 2svh;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.8vh;
+            max-height: 40vh;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image img:hover {
+            transform: scale(1.05);
+        }
+
+        .content-text {
+            padding: 2vh;
+        }
+
+        .heading h1 {
+            font-size: 3.2vh;
+            color: #333;
+            text-align: center;
+            margin-bottom: 2vh;
+        }
+
+        .text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 2vh;
+        }
+
+        .text b {
+            display: block;
+            font-size: 1.8vh;
+            color: #222;
+            margin-top: 1.5vh;
+            background: #f0f0f0;
+            padding: 0.5vh 1vh;
+            border-left: 0.5vh solid #333;
+        }
+
+        .divider {
+            height: 0.1vh;
+            background: #ccc;
+            margin: 2vh 0;
+        }
+
+        /* Return Button */
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 0.5vh;
+            padding: 1vh 2vh;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: block;
+            margin: 2vh auto;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button a::before {
+            content: "←";
+            margin-right: 1vh;
+        }
+
+        aside {
+            flex: 1;
+            padding: 2vh;
+            background: #f9f9f9;
+            border-left: 0.1vh solid #ccc;
+            border-radius: 0 0.8vh 0.8vh 0;
+        }
+
+        aside h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1vh;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 1vh;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-one section">
+        <nav style="width: 80%; height: 13vh; display: flex; align-items: center; justify-content: space-between; margin: auto;">
+            <div class="logo" style="font-size: 1.3rem; color: rgb(15, 15, 15); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AcruX</div>
+            <ul class="navlinks" style="display: flex; color: var(--light-black);">
+                <li style="list-style: none;"><a href="index.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">Home</a></li>
+                <li style="list-style: none;"><a href="product.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Product</a></li>
+                <li style="list-style: none;"><a href="blog.html" class="active" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Blog</a></li>
+                <li style="list-style: none;"><a href="research.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Research</a></li>
+                <li style="list-style: none;"><a href="about.html"  style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">About Us</a></li>
+            </ul>
+            <div class="hamburger" style="cursor: pointer; display: none;">
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+            </div>
+        </nav>
+</body>
+    
+
+    <div class="container">
+        <div class="content">
+            <div class="image">
+                <img src="https://www.theodysseyonline.com/media-library/image.jpg?id=10731850&width=980" alt="Negative Impact of Technology in the Watch Industry">
+            </div>
+            <div class="content-text">
+                <div class="heading">
+                    <h1>Negative Impact of Technology in the Watch Industry</h1>
+                </div>
+                <div class="text">
+                    <p><b>Technological Transformation in the Watch Industry</b>
+                        The watch industry has witnessed remarkable transformation over the past few decades, largely driven by technological advancements. While innovation has fueled progress and enabled new possibilities, it has also brought about significant disruptions and challenges. The rise of smartwatches, mass production, and automation has fundamentally altered the landscape of traditional horology, often at the expense of craftsmanship, heritage, and the industry’s long-standing values.
+                    </p>
+                    <div class="divider"></div>
+                    <p><b>Decline of Traditional Watchmaking</b>
+                        Traditional watchmaking has been affected negatively by technology as mechanical watches that were initially made to show the world the best tradition and craftsmanship are now being replaced by digital and smart watches. The young generation will always board a smartwatch instead of a luxury mechanical watch because they cannot understand the beauty of such a watch which has a barely visible mechanical movement. This have made historical watchmaking brands to become irrelevant in a world that has been taken over by technology.
+                    </p>
+                    <div class="divider"></div>
+                    <p><b>Disrupting the Luxury Market</b>
+                        Luxury watchmakers are conventional, they are traditional and they are craftily made. But the smartwatches have affected the luxury watch market. Apple, Samsung and Google are some of the tech companies that have come up with advanced smartwatches that can do much more than tell time.
+                    </p>
+                    
+                
+            
+                    <div class="divider"></div>
+                    <p><b>Environmental Concerns</b>
+                        Technology has caused several sustainability issues with regard to watch production. Smartwatches function similarly to other electronic devices by producing waste from their aging electronics which surpass the sustainability of mechanical parts. These technologies experience frequent replacements which exceeds the number of battery substitutions and causes further harm to the environment. A mechanical watch kept in good condition proves capable of surviving for multiple generations thus deserving more sustainable care.
+                    </p>
+                    <div class="divider"></div>
+                    <p><b>Conclusion</b>
+                        The evaluation explores positive effects but also warns about major drawbacks as technology advances the watch-making industry. Major problems have arisen for watchmakers who have existed for a long time due to the combination of smartwatches and mass production alongside counterfeits and shifting customer tastes.  The need for modern touches in established brands requires an understanding of their heritage and the preservation of their mechanical timepieces since mechanical watches retain their artistic essence even in a time of digital advances.
+                    </p>
+                    <button><a href="blog.html">Return back</a></button>
+                </div>
+            </div>
+        </div>
+
+        <aside>
+            <h3>Related Posts</h3>
+            <ul>
+                <li><a href="blog1.html">About Technology in Watchmaking</a></li>
+                <li><a href="blog2.html">Positive Impact of Technology in the Watch Industry</a></li>
+                <li><a href="blog4.html">How Technology Can Boost Watch Sales</a></li>
+                <li><a href="blog5.html">Overall Conclusion on Technology in the Watch Industry</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>

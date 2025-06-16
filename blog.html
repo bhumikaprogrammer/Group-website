@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Technology in Watchmaking</title>
+    <link rel="stylesheet" href="blog.css"><!-- External CSS -->
+   
+    <style>
+        /* Internal CSS */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background:white;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center content vertically */
+            height: 100vh; /* Full height */
+        }
+        .blog-container {
+            max-width: 120vh;
+            margin: 4vh auto;
+            padding: 2vh;
+            background: white;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+            border-radius: 0.8vh;
+        }
+
+        .blog-title {
+            text-align: center;
+            margin-bottom: 4vh;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30vh, 1fr));
+            gap: 2vh;
+        }
+
+        .blog-post {
+            background: #fff;
+            border: 0.1vh solid #ddd;
+            border-radius: 0.8vh;
+            overflow: hidden;
+            box-shadow: 0 0.2vh 0.8vh rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-2vh);
+        }
+
+        .blog-image {
+            max-height: 20vh;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover .blog-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-content {
+            padding: 2vh;
+        }
+
+        .blog-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1vh;
+        }
+
+        .blog-content p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 2vh;
+        }
+
+        .read-more {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+      /* Footer Styling */
+      footer {
+            background: #333;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2vh 5vw;
+            align-items: flex-start;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 20vh;
+            margin: 1vh 1vw;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1vh;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 1vh;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .rights-reserved {
+            width: 100%;
+            text-align: center;
+            margin-top: 2vh;
+            font-size: 0.9rem;
+        }
+       
+        </style>
+    
+</head>
+<body>
+    <section class="section-one section">
+        <nav style="width: 80%; height: 13vh; display: flex; align-items: center; justify-content: space-between; margin: auto;">
+            <div class="logo" style="font-size: 1.3rem; color: rgb(15, 15, 15); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AcruX</div>
+            <ul class="navlinks" style="display: flex; color: var(--light-black);">
+                <li style="list-style: none;"><a href="index.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">Home</a></li>
+                <li style="list-style: none;"><a href="product.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Product</a></li>
+                <li style="list-style: none;"><a href="blog.html" class="active" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Blog</a></li>
+                <li style="list-style: none;"><a href="research.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Research</a></li>
+                <li style="list-style: none;"><a href="about.html"  style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">About Us</a></li>
+            </ul>
+            <div class="hamburger" style="cursor: pointer; display: none;">
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+            </div>
+        </nav>
+    
+</body>
+    
+<main class="blog-container">
+    <div class="blog-title">
+        <p style="text-align: center; font-size: 3.5vh;">OUR WORK OF ART</p>
+    </div>
+    <section class="blog-grid">
+        <article class="blog-post">
+            <div class="blog-image">
+                <img src="https://www.chrononation.com/cdn/shop/articles/image1_0.jpg?v=1728054242" alt="Technology in Watchmaking">
+            </div>
+            <div class="blog-content">
+                <h2>About Technology in Watchmaking</h2>
+                <p>By Anish Tamrakar | January 11, 2025</p>
+                <a href="blog1.html" class="read-more">Read More</a>
+            </div>
+        </article>
+
+        <article class="blog-post">
+            <div class="blog-image">
+                <img src="https://travel.prwave.ro/wp-content/uploads/2015/10/technology.jpg" alt="Positive Impact of Technology">
+            </div>
+            <div class="blog-content">
+                <h2>Positive Impact of Technology in the Watch Industry</h2>
+                <p>By Anish Tamrakar | January 11, 2025</p>
+                <a href="blog2.html" class="read-more">Read More</a>
+            </div>
+        </article>
+
+        <article class="blog-post">
+            <div class="blog-image">
+                <img src="https://www.theodysseyonline.com/media-library/image.jpg?id=10731850&width=980" alt="Negative Impact of Technology">
+            </div>
+            <div class="blog-content">
+                <h2>Negative Impact of Technology in the Watch Industry</h2>
+                <p>By Anish Tamrakar | January 11, 2025</p>
+                <a href="blog3.html" class="read-more">Read More</a>
+            </div>
+        </article>
+
+        <article class="blog-post">
+            <div class="blog-image">
+                <img src="product image/Watches-market boost.png" alt="Boost Watch Sales with Technology">
+            </div>
+            <div class="blog-content">
+                <h2>How Technology Can Boost Watch Sales</h2>
+                <p>By Anish Tamraakar | January 11, 2025</p>
+                <a href="blog4.html" class="read-more">Read More</a>
+            </div>
+        </article>
+
+        <article class="blog-post">
+            <div class="blog-image">
+                <img src="https://canyon.eu/blog/wp-content/uploads/2023/12/image-8.png" alt="Conclusion on Technology in Watches">
+            </div>
+            <div class="blog-content">
+                <h2>Overall Conclusion on Technology in the Watch Industry</h2>
+                <p>By Anish Tamrakar | January 11, 2025</p>
+                <a href="blog5.html" class="read-more">Read More</a>
+            </div>
+        </article>
+    </section>
+</main>
+
+    
+    <footer>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="home.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="research.html">Research</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="footer-section">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="about.html">Contact Us</a>
+        </div>
+        <p class="rights-reserved">&copy; 2025 Acrux Watches Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>

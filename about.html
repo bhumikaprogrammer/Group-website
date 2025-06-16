@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AcruX</title>
+    <link rel="stylesheet" href="about.css">   <!-- External CSS -->
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            line-height: 1.6;
+        }
+        
+        .team {
+            display: flex;
+            justify-content: center; 
+            padding: 2vh 0; 
+            overflow-x: auto; 
+            flex-wrap: wrap; 
+        }
+
+        .team .member {
+            background: #e4e4e4;
+            margin: 1vh; 
+            padding: 2vh;
+            border-radius: 0.8vh;
+            text-align: center;
+            flex: 0 0 18%; 
+            transition: transform 0.3s;
+        }
+
+        .team .member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0.4vh 2vh rgba(0, 0, 0, 0.2);
+        }
+
+        .team .member img {
+            width: 10vh; 
+            height: 10vh;
+            border-radius: 50%;
+            margin-bottom: 1vh; 
+            border: 0.3vh solid #77b300;
+            transition: border-color 0.3s;
+        }
+
+        .team .member img:hover {
+            border-color: #edf1e7;
+        }
+
+        .team .member h3 a {
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit color from parent */
+        }
+
+        .feedback-form input, .feedback-form textarea {
+            width: calc(100% - 2vh);
+            padding: 1.5vh; 
+            margin: 1vh 0; 
+            border: 0.1vh solid #ccc;
+            border-radius: 0.5vh;
+            transition: border-color 0.3s;
+        }
+
+        .feedback-form input:focus, .feedback-form textarea:focus {
+            border-color: #77b300;
+            outline: none;
+        }
+
+        .feedback-form input[type="submit"] {
+            background: #77b300;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+            border: none;
+        }
+
+        .feedback-form input[type="submit"]:hover {
+            background: #60a200;
+        }
+
+        /* Footer Styling */
+      footer {
+            background: #333;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2vh 5vw;
+            align-items: flex-start;
+        }
+
+        .footer-section {
+            flex: 1;
+            width: 20vh;
+            margin: 1vh 1vw;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1vh;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 1vh;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .rights-reserved {
+            width: 100%;
+            text-align: center;
+            margin-top: 2vh;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-one section">
+        <nav style="width: 80%; height: 13vh; display: flex; align-items: center; justify-content: space-between; margin: auto;">
+            <div class="logo" style="font-size: 1.3rem; color: rgb(15, 15, 15); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AcruX</div>
+            <ul class="navlinks" style="display: flex; color: var(--light-black);">
+                <li style="list-style: none;"><a href="index.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">Home</a></li>
+                <li style="list-style: none;"><a href="product.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Product</a></li>
+                <li style="list-style: none;"><a href="blog.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Blog</a></li>
+                <li style="list-style: none;"><a href="research.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Research</a></li>
+                <li style="list-style: none;"><a href="about.html" class="active" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">About Us</a></li>
+            </ul>
+            <div class="hamburger" style="cursor: pointer; display: none;">
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+            </div>
+        </nav>
+    <section id="about" class="about">
+        <div class="content">
+            <h2>About Us</h2>
+            <p><strong>Company Information</strong><br>At AcruX, we make handcrafted classic watches with centuries-old knowledge. AcruX watches were first invented in the mid-15th century. The knowledge of watchmaking has been passed down for 19 generations and will continue. The founder's name of our company is Crucis Bond. Inspired by his name, which is the name of a star in the constellation Crux, he named the company AcruX, which is the brightest star of the Crux constellation.</p>
+            <p><strong>Mission and Vision</strong><br>Our goal is to revive the beauty of classic watches by adding modern features while maintaining pure handcrafted traditional designs. Due to the trend of minimalism and practicality, many items have lost their soul. Our aim is to bring back aesthetic items.</p>
+        </div>
+    </section>
+    <h2 class="team">Our Team</h2>
+<section id="team" class="team">
+    <div class="container">
+        <div class="member">
+            <img src="portfolio/bhumika img.jpg" alt="Team Member 1 Photo">
+            <h3><a href="portfolio/bhumika.html">Bhumika Rayamajhi</a></h3>
+            <p><strong>Role:</strong> Project Manager</p>
+            <p><strong>Responsibilities:</strong> Overseeing project timeline, writing content, and making the about us page.</p>
+            <p><strong>Project Contributions:</strong> Successfully created the about us page and documented with Project Manager II.</p>
+            <p><strong>Contact Information:</strong> bhumika21@gmail.com</p>
+        </div>
+        <div class="member">
+            <img src="portfolio/ayush.jpg" alt="Team Member 2 Photo">
+            <h3><a href="portfolio/ayush.html">Ayush Chaudhari</a></h3>
+            <p><strong>Role:</strong> Main Developer</p>
+            <p><strong>Responsibilities:</strong> Developing the home page and reviewing all other pages.</p>
+            <p><strong>Project Contributions:</strong> Successfully created the home page and integrated all pages.</p>
+            <p><strong>Contact Information:</strong> achy93858@gmail.com </p>
+        </div>
+        <div class="member">
+            <img src="portfolio/anish img.jpg" alt="Team Member 3 Photo">
+            <h3><a href="portfolio/anish.html">Anish Tamarkar</a></h3>
+            <p><strong>Role:</strong> UI/UX Designer</p>
+            <p><strong>Responsibilities:</strong> Creating wireframes and blog page structure.</p>
+            <p><strong>Project Contributions:</strong> Successfully designed all wireframes and the blog page.</p>
+            <p><strong>Contact Information:</strong> Anish02@gmail.com</p>
+        </div>
+        <div class="member">
+            <img src="portfolio/bishwash img.jpg" alt="Team Member 4 Photo">
+            <h3><a href="portfolio/bishwash.html">Bishwash Kafle</a></h3>
+            <p><strong>Role:</strong> Product Manager</p>
+            <p><strong>Responsibilities:</strong> Managing all products and images required for our project.</p>
+            <p><strong>Project Contributions:</strong> Successfully handled the product page and assisted the main developer.</p>
+            <p><strong>Contact Information:</strong>bishwashkafle0102@gmail.com</p>
+        </div>
+        <div class="member">
+            <img src="portfolio/akash img.png" alt="Team Member 5 Photo">
+            <h3><a href="portfolio/aakash.html">Aakash Koirala</a></h3>
+            <p><strong>Role:</strong> Project Manager II</p>
+            <p><strong>Responsibilities:</strong> Creating the research page and conducting content research.</p>
+            <p><strong>Project Contributions:</strong> Successfully created the research page and researched content in watchmaking.</p>
+            <p><strong>Contact Information:</strong> aakash21@gmail.com</p>
+        </div>
+    </div>
+</section>
+
+    <section id="feedback" class="feedback-form">
+        <div class="container">
+            <h2>Feedback Form</h2>
+            <form>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="research.html">Research</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="footer-section">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="about.html">Contact Us</a>
+        </div>
+        <p class="rights-reserved">&copy; 2025 Acrux Watches Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let name = document.querySelector('[name="name"]').value;
+            let email = document.querySelector('[name="email"]').value;
+            let subject = document.querySelector('[name="subject"]').value;
+            let message = document.querySelector('[name="message"]').value;
+
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields.');
+                event.preventDefault();
+            } else {
+                alert('Thank you for your feedback!');
+            }
+        });
+    </script>
+</body>
+</html>

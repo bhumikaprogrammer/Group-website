@@ -1,0 +1,267 @@
+:root {
+  --light-black: #131517;
+  --dark-blue: #003366;
+  --dark-gray: #666;
+  --white: #fff;
+}
+
+/* Navigation links styling */
+.navlinks li {
+  list-style: none;
+}
+
+.navlinks li a {
+  text-decoration: none;
+  margin-left: 2.5rem;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  position: relative;
+}
+
+/* Underline effect for navigation links */
+.navlinks li a::after,
+.navlinks li .active::after {
+  content: "";
+  background: rgb(9, 8, 8);
+  position: absolute;
+  height: 0.15rem;
+  width: 100%;
+  left: 0;
+  bottom: -0.5vh;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: left;
+}
+
+/* Show underline on hover or when active */
+.navlinks li a:hover::after,
+.navlinks li .active::after {
+  transform: scaleX(1);
+}
+
+/* Hamburger menu styling */
+.line {
+  background: var(--dark-gray);
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.38rem;
+}
+
+/* Page title styling */
+.page-title {
+  font-size: 2em;
+  margin: 0;
+  color: #333;
+}
+
+/* Main content styling */
+main {
+  padding: 2.22vh;
+  width: 80%;
+}
+
+/* Intro section styling */
+.intro {
+  text-align: center;
+  margin-bottom: 4.44vh;
+}
+
+/* Comparison table styling */
+.comparison-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 4.44vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container {
+  display: flex;
+  align-items: center;
+}
+
+.table-wrapper {
+  height: auto;
+  overflow-y: visible;
+}
+
+/* Arrow button styling */
+.arrow-button {
+  background-color: #888;
+  color: white;
+  border: none;
+  padding: 1.8vh 2vh;
+  cursor: pointer;
+  margin: 0 1.2vh;
+  font-size: 1.5em;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 0.44vh 0.67vh rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effects */
+.arrow-button:hover {
+  background-color: #666;
+  transform: scale(1.1);
+}
+
+.arrow-button:active {
+  background-color: #444;
+  box-shadow: 0 0.22vh 0.44vh rgba(0, 0, 0, 0.3);
+}
+
+/* Table styling */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto; /* Centers the table horizontally */
+  table-layout: fixed;
+  border-radius: 0.89vh;
+  box-shadow: 0 0.44vh 0.89vh rgba(0, 0, 0, 0.1);
+  max-width: 111.11vh;
+}
+
+th,
+td {
+  border: 0.11vh solid #ddd;
+  padding: 1.33vh;
+  text-align: left;
+  word-wrap: break-word; /* Allows long words to break and wrap */
+  vertical-align: top;
+  height: auto;
+  max-height: 16.67vh;
+  overflow: hidden;
+  border-radius: 0.89vh;
+  max-width: 20.83vw;
+}
+
+th {
+  background-color: #e7f3ff;
+  max-width: 13.89vw;
+}
+
+hr {
+  margin-top: 2.22vh;
+  border: none;
+  border-top: 0.22vh solid #e1e1e1;
+}
+
+/* Screenshot section styling */
+.screenshots {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4.44vh;
+  padding-top: 6.67vh;
+}
+
+.screenshot-container {
+  display: flex;
+  justify-content: space-between; /* Distributes space between items */
+  align-items: flex-end;
+  width: 100%;
+}
+
+.screenshot {
+  text-align: center;
+  flex: 1;
+  margin: 0 0.69vw;
+}
+
+.screenshot img {
+  max-width: 100%;
+  border: 0.11vh solid #ddd;
+  padding: 0.56vh;
+  background-color: #fff;
+  margin-bottom: 1.11vh;
+  cursor: pointer;
+}
+
+.screenshot p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s, font-weight 0.3s, text-decoration 0.3s;
+}
+
+.brand-link:hover {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Detailed Analysis section styling */
+.detailed-analysis {
+  margin-top: 6.67vh;
+  text-align: center;
+}
+
+.detailed-analysis h2 {
+  font-size: 2em;
+  margin-bottom: 2.22vh;
+}
+
+.detailed-analysis p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 1.67vh;
+}
+
+/* Lightbox styles for image viewing */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999; /* Ensures lightbox is above other content */
+  padding-top: 6.67vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  width: 48.61vw;
+}
+
+.close {
+  position: absolute;
+  top: 2.22vh;
+  right: 2.43vw;
+  color: #f1f1f1;
+  font-size: 4.44vh;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.detailed-analysis {
+  margin: 2.22vh;
+  line-height: 1.6;
+}
+
+.detailed-analysis p {
+  text-align: justify;
+  margin-bottom: 1.67vh;
+}
+
+.detailed-analysis h2 {
+  text-align: center;
+  margin-bottom: 2.22vh;
+  font-size: 1.8rem;
+}

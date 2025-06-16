@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Technology in Watchmaking</title>
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center content vertically */
+            height: 100vh; 
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 1vh 2vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .container {
+            display: flex;
+            max-width: 140vh;
+            margin: 4vh auto;
+            background: white;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+            border-radius: 0.8vh;
+        }
+
+        .content {
+            flex: 3;
+            padding: 2svh;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.8vh;
+            max-height: 40vh;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image img:hover {
+            transform: scale(1.05);
+        }
+
+        .content-text {
+            padding: 2vh;
+        }
+
+        .heading h1 {
+            font-size: 3.2vh;
+            color: #333;
+            text-align: center;
+            margin-bottom: 2vh;
+        }
+
+        .text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 2vh;
+        }
+
+        .text b {
+            display: block;
+            font-size: 1.8vh;
+            color: #222;
+            margin-top: 1.5vh;
+            background: #f0f0f0;
+            padding: 0.5vh 1vh;
+            border-left: 0.5vh solid #333;
+        }
+
+        .divider {
+            height: 0.1vh;
+            background: #ccc;
+            margin: 2vh 0;
+        }
+
+        /* Return Button */
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 0.5vh;
+            padding: 1vh 2vh;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: block;
+            margin: 2vh auto;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button a::before {
+            content: "←";
+            margin-right: 1vh;
+        }
+
+        aside {
+            flex: 1;
+            padding: 2vh;
+            background: #f9f9f9;
+            border-left: 0.1vh solid #ccc;
+            border-radius: 0 0.8vh 0.8vh 0;
+        }
+
+        aside h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1vh;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 1vh;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-one section">
+        <nav style="width: 80%; height: 13vh; display: flex; align-items: center; justify-content: space-between; margin: auto;">
+            <div class="logo" style="font-size: 1.3rem; color: rgb(15, 15, 15); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AcruX</div>
+            <ul class="navlinks" style="display: flex; color: var(--light-black);">
+                <li style="list-style: none;"><a href="index.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">Home</a></li>
+                <li style="list-style: none;"><a href="product.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Product</a></li>
+                <li style="list-style: none;"><a href="blog.html" class="active" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Blog</a></li>
+                <li style="list-style: none;"><a href="research.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Research</a></li>
+                <li style="list-style: none;"><a href="about.html"  style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">About Us</a></li>
+            </ul>
+            <div class="hamburger" style="cursor: pointer; display: none;">
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+            </div>
+        </nav>
+</body>
+    
+
+    <div class="container">
+        <div class="content">
+            <div class="image">
+                <img src="https://www.chrononation.com/cdn/shop/articles/image1_0.jpg?v=1728054242" alt="About Technology in Watchmaking">
+            </div>
+            <div class="content-text">
+                <div class="heading">
+                    <h1>About Technology in Watchmaking</h1>
+                </div>
+                <div class="text">
+                    <p><b>Introduction</b>
+                        At Acrux, we have combined classic craftsmanship with modern technology to design watches that are not only agents to know time, but personification of perfection. Our each pieces reflects rich heritage of century with modern capabilities.Our artists put their heart & soul to each pieces. With centuries old watchmaking techniques, Acrux ensures to make not just a watch but work of art.
+                    </p>
+                    <div class="divider"></div>
+                    <p><b>Artistry and Watchmaking Techniques</b>
+                        New technology advances have modified the process of watch construction. The tools including 3D printers shorten the manufacturing period of watch prototypes thus eliminating the need for manual design procedures. The manufacturing process benefits from virtual technology through which manufacturers can view final products in their worst state. The work of watches has experienced a total transformation through technological developments. Modern technological watches provide users with features for health tracking, fitness tracking, sleep tracking and heart rate sensors and additional capabilities to enhance daily life activities.
+                    </p>
+                    <div class="divider"></div>
+                    <p><b>Designs with Diamond and Gold</b>
+                        The light of technology couplings with gold and diamonds to create classic watches. Gold is shaped and built with skill and care, perfected by processes like casting, forging and milling, using advanced technology that assures everything shows the standards of luxury. Allows are added to improve the gold hardness, resulting in variations like rose, yellow and white gold. Diamonds and golds are used.
+                    </p>
+                    <div class="divider"></div>
+                    <p><b>The Digital Transformation</b>
+                        With the onset of the 21st century, smartwatches entered the scene, combining the raw world of digital technology with the classic realm of timekeeping. From fitness tracking to notification delivery to voice assistants to health-monitoring: smartwatches can do it all. Apple, Samsung, Garmin and other companies have reinvented watches to become digital gadgets that serve the needs of today’s consumers.
+                    </p>
+                
+                    <div class="divider"></div>
+                    <p><b>Sustainability and Eco-Friendly Innovations</b>
+                        The watch industry uses sustainability as its main keyword in current times. The watch industry has discovered environmentally friendly production methods which change from sunlight power through recycled components combined with energy-saving methods. The solar technology used by Citizen and Seiko allows their watches to extract power from light sources instead of relying on batteries thus reducing waste generation.
+                    </p>
+                    
+                    <div class="divider"></div>
+                    <p><b>Conclusion</b>
+                        Makers of watches competed by finding ways to minimize their timekeeping history by the smallest second intervals. People who prefer Swiss automatic watches alongside smartwatch users both benefit from continuous technological advancements in watch production. The watch industry will continue to combine traditional heritage with contemporary technology as new product developments emerge thus satisfying watch enthusiasts with this combination.
+                    </p>
+                    <button><a href="blog.html">Return back</a></button>
+                </div>
+            </div>
+        </div>
+
+        <aside>
+            <h3>Related Posts</h3>
+            <ul>
+                <li><a href="blog2.html">Positive Impact of Technology in the Watch Industry</a></li>
+                <li><a href="blog3.html">Negative Impact of Technology in the Watch Industry</a></li>
+                <li><a href="blog4.html">How Technology Can Boost Watch Sales</a></li>
+                <li><a href="blog5.html">Overall Conclusion on Technology in the Watch Industry</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
