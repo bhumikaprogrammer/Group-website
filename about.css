@@ -1,0 +1,72 @@
+/* External CSS */
+:root {
+  --light-black: #131517;
+  --dark-blue: #003366;
+  --dark-gray: #666;
+  --white: #fff;
+}
+.navlinks li {
+  list-style: none;
+}
+
+.navlinks li a {
+  text-decoration: none;
+  margin-left: 2.5rem;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  position: relative;
+}
+
+.navlinks li a::after,
+.navlinks li .active::after {
+  content: "";
+  background: rgb(9, 8, 8);
+  position: absolute;
+  height: 0.15rem;
+  width: 100%;
+  left: 0;
+  bottom: -0.5vh;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: left;
+}
+
+.navlinks li a:hover::after,
+.navlinks li .active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.line {
+  background: var(--dark-gray);
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.38rem;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.about,
+.feedback-form {
+  padding: 2vh;
+  background: #fff;
+  border-radius: 1vh;
+  box-shadow: 0 0.3vh 1.5vh rgba(0, 0, 0, 0.1);
+  margin-bottom: 2vh;
+}
+
+.about h2,
+.feedback-form h2,
+.team h2 {
+  color: #333;
+  text-align: center;
+  border-bottom: 0.3vh solid #77b300;
+  padding-bottom: 1vh;
+}
+
+.about p {
+  margin: 1vh 0;
+}

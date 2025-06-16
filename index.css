@@ -1,0 +1,215 @@
+/* External CSS */
+/* root variables for reusable colors */
+:root {
+  --light-black: #131517;
+  --dark-blue: rgb(0, 51, 102);
+  --dark-gray: #666;
+  --white: #fff;
+}
+
+/* Styling for navigation links */
+.navlinks li {
+  list-style: none; /* Removes bullet points from list items */
+}
+
+.navlinks li a {
+  text-decoration: none; /* Removes underline from links */
+  margin-left: 2.5rem;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  position: relative; /* Enables positioning for the ::after pseudo-element */
+}
+
+/* Styling for the underline effect on links */
+.navlinks li a::after,
+.navlinks li .active::after {
+  content: ""; /* Creates an empty pseudo-element */
+  background: rgb(9, 8, 8);
+  position: absolute;
+  height: 0.15rem;
+  width: 100%;
+  left: 0;
+  bottom: -0.5vh;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: left;
+}
+
+/* Show the underline on hover or when the link is active */
+.navlinks li a:hover::after,
+.navlinks li .active::after {
+  transform: scaleX(1);
+}
+
+/* Styling for the hamburger menu lines */
+.line {
+  background: var(--dark-gray);
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.38rem;
+}
+
+/* Styling for the 'New Arrivals' section */
+.section-arrivals {
+  padding-top: 5rem;
+}
+
+.new-arrivals {
+  width: 100%;
+  max-width: 110vh;
+  margin: auto;
+  padding: 3vh;
+  border-radius: 0.8vh;
+  align-items: center;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2vh;
+  font-size: 3em;
+  color: #0d0b0b;
+}
+
+/* Styling for individual items in the 'New Arrivals' section */
+.new-arrival-item {
+  flex: 1 1 calc(33% - 2%);
+  margin: 2vh 1%;
+  text-align: center;
+  border-radius: 2vh;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background: whitesmoke;
+}
+
+.new-arrival-item img {
+  width: 34vh;
+  height: 30vh;
+  padding-top: 2rem;
+  object-fit: cover;
+}
+
+.new-arrival-item p {
+  margin: 3vh 0;
+  font-size: 2vh;
+  color: #201d1d;
+}
+
+.new-arrival-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4vh 8vh rgba(0, 0, 0, 0.2);
+}
+
+.new-arrivals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Carousel styling */
+.carousel {
+  height: 40vh;
+  width: 100%;
+  max-width: 80vh;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 4vh;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+img {
+  width: 33vh;
+  height: 30vh;
+  object-fit: cover;
+}
+
+/* Styling for the hamburger menu */
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2vh 5vw;
+  align-items: flex-start;
+}
+
+.footer-section {
+  flex: 1;
+  width: 20vh;
+  margin: 1vh 1vw;
+}
+
+.footer-section h4 {
+  margin-bottom: 1vh;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1vh;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.rights-reserved {
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 0.9rem;
+}
+
+/* Newsletter Signup */
+.newsletter {
+  padding: 3rem;
+  background: #f9f9f9;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.newsletter input[type="email"] {
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1vh solid #ccc;
+}
+
+.newsletter button {
+  padding: 1rem 1.5rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+}

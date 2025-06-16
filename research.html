@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="research.css"> <!-- External CSS -->
+   
+    <style>
+        /* Internal CSS */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center content vertically */
+            height: 100vh; /* Full height */
+        }
+         /* Footer Styling */
+      footer {
+            background: #333;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2vh 5vw;
+            align-items: flex-start;
+        }
+
+        .footer-section {
+            flex: 1;
+            width: 20vh;
+            margin: 1vh 1vw;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1vh;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 1vh;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .rights-reserved {
+            width: 100%;
+            text-align: center;
+            margin-top: 2vh;
+            font-size: 0.9rem;
+        }
+        .research
+        {
+            text-align: center;
+        }
+    </style>
+
+<body>
+    <section class="section-one section">
+        <nav style="width: 80%; height: 13vh; display: flex; align-items: center; justify-content: space-between; margin: auto;">
+            <div class="logo" style="font-size: 1.3rem; color:rgb(15, 15, 15); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AcruX</div>
+            <ul class="navlinks" style="display: flex; color: var(--light-black);">
+                <li style="list-style: none;"><a href="index.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1.1rem; letter-spacing: 0.3rem;">Home</a></li>
+                <li style="list-style: none;"><a href="product.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Product</a></li>
+                <li style="list-style: none;"><a href="blog.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Blog</a></li>
+                <li style="list-style: none;"><a href="research.html" class="active" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">Research</a></li>
+                <li style="list-style: none;"><a href="about.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(15, 14, 14); font-size: 1rem; letter-spacing: 0.3rem;">About Us</a></li>
+            </ul>
+            <div class="hamburger" style="cursor: pointer; display: none;">
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+            </div>
+        </nav>
+    </section>
+   
+     <h2 class="research">Research</h2>
+   <!-- Introductory section explaining the purpose of the page -->
+   <section class="intro">
+    <h4>In this section, we will conduct a comparative analysis of three watch e-commerce websites.</h4>
+</section>
+<!-- Section for the comparison table of watch brands -->
+<section class="comparison-table">
+    <div class="table-container">
+        <!-- Button to navigate to the previous brand's analysis -->
+        <button id="prevButton" class="arrow-button">&#10094;</button>
+        <div class="table-wrapper">
+            <!-- Table displaying various analysis criteria for the brands -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Analysis Criteria</th>
+                        <th id="brandName">Samaya Watch</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>Visual Design</td>
+                        <td>Beautiful, traditional designs that focus on craftsmanship</td>
+                    </tr>
+                    <tr>
+                        <td>User Interface</td>
+                        <td>Intuitive and user interface</td>
+                    </tr>
+                    <tr>
+                        <td>User Experience</td>
+                        <td>Exceptional user experience  seamless navigation</td>
+                    </tr>
+                    <tr>
+                        <td>Technologies Used</td>
+                        <td>Cutting-edge technology  watchmaking</td>
+                    </tr>
+                    <tr>
+                        <td>Navigation Structure</td>
+                        <td>Easy to navigate with  categories</td>
+                    </tr>
+                    <tr>
+                        <td>Features and Functionality</td>
+                        <td>Rich features including  options</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Button to navigate to the next brand's analysis -->
+        <button id="nextButton" class="arrow-button">&#10095;</button>
+    </div>
+</section>
+<hr>
+<!-- Section displaying screenshots of the watch brands' websites -->
+<section class="screenshots">
+    <div class="screenshot-container">
+        <div class="screenshot">
+            <img src="images/Samayahome.png" alt="Samaya Watch" class="lightbox-trigger">
+            <p><a href="https://samayawatch.com/" target="_blank" class="brand-link">Samaya Watch</a></p>
+        </div>
+        <div class="screenshot">
+            <img src="images/Timexhome.png" alt="Titan" class="lightbox-trigger">
+            <p><a href="https://www.titan.co.in/homepage?lang=en_IN" target="_blank" class="brand-link">Timex</a></p>
+        </div>
+        <div class="screenshot">
+            <img src="images/Titanhome.png" alt="Timex" class="lightbox-trigger">
+            <p><a href="https://timex.com/" target="_blank" class="brand-link">Titan</a></p>
+        </div>
+    </div>
+</section>
+<hr>
+<!-- Section providing detailed analysis of the watch brands -->
+<section class="detailed-analysis">
+    <h2>Detailed Analysis</h2>
+    <p>
+        <strong>Samaya Watch:</strong> Samaya Watch site uses high quality imagery, minimal design, and a focus on their (sustainable sourced and made) Nepali watches. It is easy for users to explore the products when the layout is simple and colors neutral. It's really easy to navigate, and all the responsive elements work seamlessly on desktop and mobile devices. The site speed and efficiency is also achieved by using fancy tecnologies like HTML 5 and Javascript, but no fancy things like live chat, advanced filters, etc.
+
+    </p>
+    <p>
+        <strong>Titan:</strong> Dynamic and colourful Titan Web site reflects its worldwide audience and product portfolio. To do so, it uses beautiful photographs, colourful banners, and personalised sections that highlight curated collections and events. It's not hard to browse a huge catalog, like an intuitive interface with general filters and a search function. The website built with modern frameworks (e.g. React. js)for adaptation and offers a flexible interface across devices. Small things like this: customer reviews, advanced payment options, detailed FAQ fall into the usability category.
+                </p>
+    <p>
+        <strong>Timex:</strong> Timex lets its heritage come across in the classic nature of the design on the website.It uses classic fonts, muted colors and clean formats — all of which provides a professional look.Navigation is simple, with well-organized categories and an effective search bar.While the website uses reliable technologies for stability, it lacks some modern interactive elements seen in others sites.That ethos is shining through, as readily evident in Timex's quest for durability and reliability .
+    </p>
+</section>
+</main>
+
+<!-- Lightbox Modal for displaying images in a larger view -->
+<div id="lightbox" class="lightbox">
+<span class="close">&times;</span>
+<img class="lightbox-content" id="lightbox-img">
+</div>
+        <footer>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="research.html">Research</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="about.html">Contact Us</a>
+            </div>
+            <p class="rights-reserved">&copy; 2025 Acrux Watches Inc. All rights reserved.</p>
+        </footer>
+        <script src="research.js"></script>     
+</body>
+</html>

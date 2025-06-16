@@ -1,0 +1,334 @@
+/* <!-- External CSS --> */
+:root {
+  --light-black: #131517;
+  --dark-blue: #003366;
+  --dark-gray: #666;
+  --white: #fff;
+}
+.navlinks li {
+  list-style: none;
+}
+
+.navlinks li a {
+  text-decoration: none;
+  margin-left: 2.5rem;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  position: relative;
+}
+
+.navlinks li a::after,
+.navlinks li .active::after {
+  content: "";
+  background: rgb(8, 7, 7);
+  position: absolute;
+  height: 0.15rem;
+  width: 100%;
+  left: 0;
+  bottom: -0.5vh;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: left;
+}
+
+.navlinks li a:hover::after,
+.navlinks li .active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.line {
+  background: var(--dark-gray);
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.38rem;
+}
+
+/* ----hshs--- */
+
+h1 {
+  text-align: center;
+  color: #2c3e50; /* shade */
+  margin-top: 2vh;
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
+  margin: 2vh;
+}
+
+#searchBar,
+#sortOrder {
+  padding: 1vh;
+  font-size: 1.6vh;
+  border: 0.1vh solid #39b740;
+  border-radius: 0.5vh;
+  transition: border-color 0.3s;
+}
+
+#searchBar:focus,
+#sortOrder:focus {
+  border-color: #32aa3c;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vh;
+  margin: 2vh;
+}
+
+.watch-card {
+  background: #b8c6ca;
+  border: 0.1vh solid #fafbfc;
+  border-radius: 1vh;
+  width: 40vh;
+  height: 60vh;
+  padding: 2.5vh;
+  text-align: center;
+  box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.2); /*  pronounced shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.watch-card:hover {
+  transform: translateY(-0.5vh);
+  box-shadow: 0 0.6vh 1vh rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.watch-card img {
+  width: 42vh;
+  border-radius: 0.5vh;
+  height: 37vh;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 2vh;
+  margin: 1vh 0;
+  color: #34495e; /* Darker blue-gray for headings */
+}
+
+p {
+  font-size: 1.4vh;
+  color: #7f8c8d; /* Softer gray for paragraph text */
+}
+
+.price {
+  font-size: 1.8vh;
+  color: #e74c3c; /* Bold red for prices */
+  font-weight: bold;
+  margin: 1vh 0;
+}
+
+.product-rating span {
+  color: #f1c40f; /* Golden yellow for ratings */
+  font-size: 1.8vh;
+}
+
+button {
+  background-color: #3498db; /* Bright blue for buttons */
+  color: #fff;
+  padding: 1vh 2vh;
+  border: none;
+  border-radius: 0.5vh;
+  font-size: 2vh;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-0.2vh);
+}
+button:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+/* Add to Cart Items section */
+.purchase-list {
+  margin: 2vh auto;
+  padding: 2vh;
+  background: #f9f9f9; /* Lighter background color */
+  border-radius: 1vh;
+  box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+.purchase-list h3 {
+  font-size: 2vh;
+  color: #333;
+  text-align: center;
+}
+
+.purchase-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1vh 0;
+}
+
+.purchase-list ul li {
+  padding: 1vh;
+  margin: 1vh 0;
+  background: #ffffff; /* White background for items */
+  border: 0.1vh solid #ccc;
+  border-radius: 0.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.purchase-list ul li button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 0.5vh;
+  padding: 0.5vh 1vh;
+  cursor: pointer;
+}
+
+.purchase-list ul li button:hover {
+  background-color: #c0392b;
+}
+
+#total-amount {
+  font-size: 2vh;
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+/* Payment Details section */
+.payment-section {
+  margin: 2vh auto;
+  padding: 2vh;
+  background: #f9f9f9; /* Lighter background color */
+  border-radius: 1vh;
+  box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+.payment-section h3 {
+  font-size: 2vh;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.payment-section input,
+.payment-section select {
+  display: block;
+  width: 90%;
+  padding: 1vh;
+  margin: 1vh auto;
+  border: 0.1vh solid #ccc;
+  border-radius: 0.5vh;
+}
+
+.payment-section input:focus,
+.payment-section select:focus {
+  border-color: #3498db; /* Blue border on focus */
+}
+
+#cod-details {
+  margin-top: 1vh;
+  text-align: center;
+  color: #555;
+}
+
+.payment-section button {
+  display: block;
+  width: 50%;
+  padding: 1vh;
+  margin: 2vh auto;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 0.5vh;
+  cursor: pointer;
+  font-size: 1.8vh;
+}
+
+.payment-section button:hover {
+  background-color: #2980b9;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2vh;
+  border-radius: 1vh;
+  text-align: center;
+  width: 40vh;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  float: right;
+  font-size: 2vh;
+  cursor: pointer;
+  color: #e74c3c;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #c0392b;
+}
+
+.decrease-qty,
+.increase-qty,
+.cancel-btn {
+  background-color: #888;
+  color: white;
+  border: none;
+  padding: 0.5vh 1vh;
+  margin: 0 0.5vh;
+  cursor: pointer;
+  border-radius: 0.5vh;
+  font-size: 2vh;
+}
+
+.decrease-qty:hover,
+.increase-qty:hover,
+.cancel-btn:hover {
+  background-color: #666;
+}
+
+.decrease-qty:active,
+.increase-qty:active,
+.cancel-btn:active {
+  background-color: #444;
+}
+
+.purchase-list li {
+  margin-bottom: 1vh;
+}
+
+.purchase-list .quantity {
+  margin: 0 1vh;
+  font-size: 2vh;
+  font-weight: bold;
+}
+/* Style for the discount message */
+#discount-message {
+  font-size: 1.2rem;
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+}

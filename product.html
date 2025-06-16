@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Acrux Watches</title>
+    <link rel="stylesheet" href="product.css"> <!-- External CSS -->
+    <script src="product.js"></script><!-- External JS -->
+    <style>
+      /* Internal CSS */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height */
+        }
+         
+        /* Footer Styling */
+      footer {
+            background: #333;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;/* Space items evenly */
+            padding: 2vh 5vw;
+            align-items: flex-start;
+        }
+
+        .footer-section {
+            flex: 1;
+            width: 20vh;
+            margin: 1vh 1vw;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1vh;
+            font-size: 1.2rem;
+            text-align: center;/* Center text */
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none; /* Remove underline from links */
+            display: block;
+            margin-bottom: 1vh;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .rights-reserved {
+            width: 100%;
+            text-align: center;
+            margin-top: 2vh;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="section-one section">
+        <nav style="width: 80%; height: 13vh; display: flex; align-items: center; justify-content: space-between; margin: auto;">
+            <div class="logo" style="font-size: 1.3rem; color: var(--light-black); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AcruX</div>
+            <ul class="navlinks" style="display: flex; color: var(--light-black);">
+                <li style="list-style: none;"><a href="index.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">Home</a></li>
+                <li style="list-style: none;"><a href="product.html" class="active" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">Product</a></li>
+                <li style="list-style: none;"><a href="blog.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">Blog</a></li>
+                <li style="list-style: none;"><a href="research.html"text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">Research</a></li>
+                <li style="list-style: none;"><a href="about.html" style="text-decoration: none; margin-left: 2.5rem; color: rgb(0, 0, 0); font-size: 1rem; letter-spacing: 0.3rem;">About Us</a></li>
+            </ul>
+            <div class="hamburger" style="cursor: pointer; display: none;">
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+                <div class="line" style="background: var(--dark-gray); width: 2.5rem; height: .2rem; margin: .38rem;"></div>
+            </div>
+        </nav>
+    </section>
+    
+    <h1>Watch Collection</h1>
+    <div class="search-filter-container">
+        <input type="text" id="searchBar" placeholder="Search products..." oninput="filterProducts()">
+        <select id="sortOrder" onchange="sortProducts()">
+            <option value="" selected disabled>Sort by Price</option>
+            <option value="all">All</option>
+            <option value="1000-5000">Price: Rs.1000 - Rs.5000</option>
+            <option value="5000-10000">Price: Rs.5000 - Rs.10000</option>
+            <option value="10000+">Price: Rs.10000+</option>
+        </select>
+        
+    </div>
+
+    <div class="container">
+        <div class="watch-card">
+            <img src="product image/m126719blro-0002_drp-upright-bba-with-shadow.png" alt="Elegant Watch">
+            <h2>Crusis Celestia</h2>
+            <p> Daytona silver dial.</p>
+            <div class="price">RS.12999</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis COSMOGRAPH DAYTONA', 12999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/m126619lb-0003_drp-upright-bba-with-shadow-Torres-Joalheiros.png" alt="Sporty Watch">
+            <h2>Crusis legacy</h2>
+            <p> Black Dial</p>
+            <div class="price">RS.99999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis DATEJUST 41', 9999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/1_drp-upright-bba-with-shadow-Torres-Joalheiros.png" alt="Elegant Watch">
+            <h2>Crusis Mariner</h2>
+            <p> a motif diamond dial.</p>
+            <div class="price">RS.5559.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis Datejust an black jubilee motif diamond dial', 5559.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/17304452_1.png" alt="Sporty Watch">
+            <h2>Crusis Zenith</h2>
+            <p> a champagne Gold dial.</p>
+            <div class="price">RS.14999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis Datejust a champagne diamond dial', 14999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/drp-upright-bba-with-shadow.png" alt="Classic Leather Watch">
+            <h2>Crusis Equinox </h2>
+            <p>Roman numeral dial .</p>
+            <div class="price">RS.2499.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis Datejust with Roman numeral dial', 2499.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/m128345rbr-0068_drp-upright-bba-with-shadow.png" alt="Digital Watch">
+            <h2>Crusis GREEN</h2>
+            <p>Green with classy.</p>
+            <div class="price">RS.8999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis silver', 8999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/upright-bba-with-shadow.png" alt="Luxury Gold Watch">
+            <h2>Crusis Royale</h2>
+            <p>President.</p>
+            <div class="price">RS.39999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis Day-Date President bracelet', 39999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/m228239-0033_drp-upright-bba-with-shadow_696baea1-129e-41a3-baf3-7da95956d668_1080x.png" alt="Minimalist Watch">
+            <h2>Crusis Vanguard</h2>
+            <p>Simple and cool design.</p>
+            <div class="price">RS.12999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis GMT-Master II', 12999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/m128349rbr-0031_drp-upright-bba-with-shadow.png" alt="Smartwatch">
+            <h2>Crusis Blue</h2>
+            <p>BLUESY.</p>
+            <div class="price">RS.4999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis SUBMARINER BLUESY', 4999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/drp-upright-bba-with-shadow (2).png" alt="Vintage Watch">
+            <h2>Crusis Cartier</h2>
+            <p>Silver plated.</p>
+            <div class="price">RS.1999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis Cartier in Gold', 1999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/m228236-0012_drp-upright-bba-with-shadow.png" alt="Field Watch">
+            <h2>Crusis Nocturne</h2>
+            <p>Sky blue dial and silver bezel.</p>
+            <div class="price">RS.11999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis Submariner black dial and black ceramic bezel', 11999.99, this)">Add to Cart</button>
+        </div>
+        <div class="watch-card">
+            <img src="product image/upright-bba-with-shadow.png" alt="Fashion Watch">
+            <h2>Crusis </h2>
+            <p>Upright Shadow.</p>
+            <div class="price">RS.1999.99</div>
+            <div class="product-rating">
+                <span>★★★★☆ </span>
+            </div>
+            <button onclick="purchaseWatch('Crusis GMT MASTER II PEPSI 2022', 1999.99, this)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="purchased-card" id="purchased-card">
+        <!-- purchase confirmation will be here -->
+    </div>
+
+    <div class="purchase-list">
+        <div class="purchase-list">
+            <h3>Add to Cart Items:</h3>
+            <ul id="purchase-list"></ul>
+            <div id="total-amount">Total: Rs.0.00</div> <!-- Display total amount -->
+            <p id="discount-message"></p> <!-- Added discount message area -->
+        </div>
+        
+   </div>
+
+    <div class="payment-section" id="payment-section">
+        <h3>Payment Details</h3>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="location" placeholder="Location" required>
+        <input type="text" id="contact" placeholder="Contact Number" required>
+        
+        <label for="payment-method"></label>
+        <select id="payment-method" required>
+            <option value="" disabled selected>Select a payment method</option>
+            <option value="cod">Cash on Delivery (COD)</option>
+        </select>
+        
+        <div id="cod-details" style="display:none;">
+            <p>Please have cash ready upon delivery.</p>
+        </div>
+
+        <button onclick="processPayment()">Confirm Payment</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Your order has been processed successfully!</p>
+            <p>Thank you for choosing us!</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="research.html">Research</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About Us</a>
+    </div>
+    <div class="footer-section">
+        <h4>Follow Us</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+    </div>
+    <div class="footer-section">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="about.html">Contact Us</a>
+    </div>
+    <p class="rights-reserved">&copy; 2025 Acrux Watches Inc. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+           
